@@ -1,0 +1,33 @@
+.footer {
+	padding: 3em 0 1em;
+	background-color: $color4;
+
+	&__container {
+		width: 90%;
+		margin: 0 auto;
+	}
+	&__items-container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__item {
+		width: 43%;
+	}
+	&__item-title {
+		text-transform: uppercase;
+		color: #fff;
+		line-height: 1.5;
+	}
+	&__item-list {
+		margin: 0;
+		padding-left: 0;
+		list-style: none;
+	}
+	&__list-link {
+		color: rgba(#fff, .5);
+		text-decoration: none;
+		line-height: 2.5;
+		font-size: 1.2em;
+	}
+}

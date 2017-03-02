@@ -1,0 +1,122 @@
+.header {
+	padding: 1.5em 0;
+
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+
+	&__container {
+		width: 90%;
+		margin: 0 auto;
+	}
+	&__icons-container {
+		position: relative;
+	}
+	//Menu for lenguages
+	&__lenguage {
+		position: absolute;
+		top: 0;
+		left: 0; 
+	}
+	&__opt-lenguage {
+		color: $color5;
+		font-size: 1.3em;
+		background-color: rgba(#fff, .8);
+		display: inline-block;
+		line-height: 2;
+		padding: 0 1.5em 0 .5em;
+		position: relative;
+		cursor: pointer;
+	}
+	//icon arrow svg
+	&__opt-arrow {
+		width: 1.5em;
+		fill: $color5;
+		position: absolute;
+		top: .3em;
+		left: 1.7em;
+	}
+	//Menu with options for lenguages
+	&__opt-list {
+		margin: 0;
+		padding-left: 0;
+		list-style: none;
+		background-color: rgba(#fff, .8);
+		width: 4.4em;
+		max-height: 0;
+		overflow: hidden;
+		transition: all 250ms ease-in;
+
+		&.show-menu {
+			max-height: 10rem;
+		}
+	}
+	&__opt {
+		color: $color5;
+		font-size: 1.3em;
+		line-height: 2.4;
+		padding-left: .5em;
+	}
+	//Svg logo Hyatt
+	&__logo {
+		width: 11em;
+
+		position: absolute;
+		top: 0;
+		left: 25%;
+	}
+	&__logo-type {
+		fill: #fff;
+	}
+	&__logo-circle-1 {
+		fill: $color1;
+	}
+	&__logo-circle-2,
+	&__logo-circle-8 {
+		fill: #111;
+	}
+	&__logo-circle-3 {
+		fill: #F18121;
+	}
+	&__logo-circle-4 {
+		fill: #7582C0;
+	}
+	&__logo-circle-5 {
+		fill: #B2AA7E;
+	}
+	&__logo-circle-6 {
+		fill: #D5DF37;
+	}
+	&__logo-circle-7 {
+		fill: #58B1CE;
+	}
+	&__logo-circle-9 {
+		fill: #76C065;
+	}
+	//Svg icon menu
+	&__icon-menu {
+		width: 3.5em;
+		fill: #fff;
+		cursor: pointer;
+
+		position: absolute;
+		top: -.7em;
+		right: 0;
+		z-index: 550;
+	}
+	//Book Now button
+	&__book-btn {
+		display: inline-block;
+		line-height: 2.7;
+		background-color: $color3;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #fff;
+		font-weight: $bold;
+		padding: 0 2em;
+		border-radius: 30px;
+		border-bottom: 4px solid darken($color3, 8%);
+		display: none;
+	}
+}

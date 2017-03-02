@@ -1,0 +1,37 @@
+.landing {
+	padding: 4.7em 0;
+	background: url(../images/landing-small.jpg) 50% 50% / cover no-repeat;
+
+	&__container {
+		width: 90%;
+		margin: 0 auto;
+	}
+	&__copy-content {
+		padding: 1.5em 0;
+		text-align: center;
+	}
+	&__copy {
+		text-transform: uppercase;
+		color: #fff;
+		line-height: 1.4;
+		font-weight: $black;
+		font-size: 3em;
+		text-shadow: 1.5px 2px 3px rgba(#111, .3);
+	}
+	&__copy-style {
+		font-size: 4.3rem;
+	}
+	&__btn-book {
+		display: inline-block;
+		line-height: 3.2;
+		width: 100%;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #fff;
+		background-color: $color1;
+		border-radius: 40px;
+		border-bottom: 4px solid darken($color1, 10%);
+		font-weight: $bold;
+		font-size: 1.2em;
+	}
+}

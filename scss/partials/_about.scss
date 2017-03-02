@@ -1,0 +1,25 @@
+.about {
+	padding: 3em 0;
+
+	&__container {
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	&__header {
+		padding: 1em 0;
+	}
+	&__header-title {
+		text-transform: uppercase;
+		margin: 0;
+		color: $color5;
+		line-height: 1.5;
+		font-weight: $black;
+		font-size: 2em;
+	}
+	&__copy {
+		color: $color4;
+		font-size: 1.3em;
+		line-height: 1.7;
+	}
+}

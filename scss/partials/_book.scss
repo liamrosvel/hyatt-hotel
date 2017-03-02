@@ -1,0 +1,214 @@
+.book {
+	background-color: $color4;
+	padding: 2em 1em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	overflow: auto;
+	z-index: 600;
+
+	transform: translateY(-110%);
+	opacity: 0;
+	transition: all 450ms ease-in;
+
+	&.open-modal {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	&__icons-container {
+		position: relative;
+		text-align: center;
+	}  
+	//Svg logo Hyatt
+	&__logo {
+		width: 11em;
+	}
+	&__logo-type {
+		fill: #fff;
+	}
+	&__logo-circle-1 {
+		fill: $color1;
+	}
+	&__logo-circle-2,
+	&__logo-circle-8 {
+		fill: #111;
+	}
+	&__logo-circle-3 {
+		fill: #F18121;
+	}
+	&__logo-circle-4 {
+		fill: #7582C0;
+	}
+	&__logo-circle-5 {
+		fill: #B2AA7E;
+	}
+	&__logo-circle-6 {
+		fill: #D5DF37;
+	}
+	&__logo-circle-7 {
+		fill: #58B1CE;
+	}
+	&__logo-circle-9 {
+		fill: #76C065;
+	}
+	&__icon-close {
+		cursor: pointer;
+		fill: #fff;
+		width: 3em;
+
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	//Header copy
+	&__header {
+		padding: 2em 0;
+	}
+	&__header-title {
+		text-align: center;
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: $bold;
+		font-size: 1.2em;
+		margin-bottom: 0;
+	}
+	//Form styles
+	&__form-container {
+		position: relative;
+	}
+	&__form {
+
+	}
+	&__form-label {
+		display: block;
+		text-transform: uppercase;
+		color: #fff;
+		margin-bottom: .5em;
+	}
+	&__form-input {
+		border: 1px solid rgba(#ccc, .5);
+		color: $color5;
+		margin-bottom: 1em;
+		line-height: 3;
+		padding-left: 1em;
+		&:focus {
+			outline: none;
+		}
+	}
+	&__form-input--style {
+		width: 100%;
+	}	
+	&__button {
+		display: inline-block;
+		line-height: 3.2;
+		width: 100%;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #fff;
+		background-color: $color1;
+		border-radius: 40px;
+		border-bottom: 4px solid darken($color1, 10%);
+		font-weight: $bold;
+		font-size: 1.2em;
+	}
+	//calendar styles
+	&__calendar-container-one,
+	&__calendar-container-two {
+		position: absolute;
+		top: 3.5em;
+		left: -.2em;
+		z-index: 650;
+		animation: slideCalendar 600ms ease-in .2s 1 normal;
+		animation-play-state: pause;
+		display: none;
+		&.calendar-play {
+			animation-play-state: play;
+			display: initial;
+		} 
+	}
+	&__calendar-container-two {
+		top: 10em;
+		z-index: 600;
+	}
+	&__calendar {
+		background-color: #f1f1f1;
+		border-radius: 5px;
+		padding: .5em 1em;
+		width: 20em;
+		position: relative;
+	}
+	&__calendar-point {
+		width: 0;
+		height: 0;
+		border: 10px solid transparent;
+		border-bottom-color: #f1f1f1;
+		position: absolute;
+		top: -1.2em;
+		left: 1em;
+	}	
+	&__calendar-month-container {
+		text-align: center;
+		border-bottom: 1px solid rgba($color5, .4);
+	}
+	&__calendar-month {
+		color: $color4;
+		font-weight: $black;
+		margin: .4em 0;
+	}
+	&__calendar-month-year {
+		font-weight: $normal;
+	}
+	&__calendar-week-container,
+	&__calendar-days-container {
+		display: flex;
+		justify-content: space-between;
+		line-height: 3;
+		font-weight: $bold;
+		color: $color5;
+	}
+	&__calendar-week-container {
+		border-bottom: 1px solid rgba($color5, .4);
+	}
+	&__calendar-day {
+		cursor: pointer;
+		width: 2em;
+		height: 2em;
+		font-size: .8em; 
+		border-radius: 50%;
+		margin: .5em 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: background-color 150ms ease-in;
+		&:hover {
+			background-color: rgba(#ccc, .4);
+			border-radius: 50%;
+		}
+	}
+	&__calendar-day-style {
+		color: rgba($color5, .4);
+		font-weight: $normal;
+	}
+	//Animation calendar
+	@keyframes slideCalendar {
+		0% 
+		{
+			opacity: 0;
+			transform: translateY(0);
+		}
+		50%
+		{
+			opacity: .5;
+			transform: translateY(2em);
+		}
+		100%
+		{
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}

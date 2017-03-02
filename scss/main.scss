@@ -4,8 +4,45 @@
 	box-sizing: border-box;
 }
 
+//Color Variables
+
+$color1: #f5a623;
+$color2: #7582c0;
+$color3: #76c065;
+$color4: #333333;
+$color5: #999999;
+
+//Font-family
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+
+//Font-weight
+
+$normal: 400;
+$bold: 700;
+$black: 900;
+
 //General styles
+
+body {
+	font-family: 'Lato', sans-serif;
+}
 
 img {
 	max-width: 100%;
 }
+
+//@imports
+
+@import "partials/header";
+@import "partials/main-nav";
+@import "partials/landing";
+@import "partials/book";
+@import "partials/about";
+@import "partials/room";
+@import "partials/dining";
+@import "partials/meeting";
+@import "partials/activities";
+@import "partials/contact";
+@import "partials/family";
+@import "partials/footer";
