@@ -1,10 +1,17 @@
 .header {
-	padding: 1.5em 0;
+	padding: 1em 0;
+	background-color: transparent;
+	height: 5em;
 
 	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
+	z-index: 600;
+	transition: all 350ms ease-in;
+	&.header-scroll {
+		background-color: #fff;
+	}
 
 	&__container {
 		width: 90%;
@@ -22,7 +29,7 @@
 	&__opt-lenguage {
 		color: $color5;
 		font-size: 1.3em;
-		background-color: rgba(#fff, .8);
+		background-color: rgba(#fff, .9);
 		display: inline-block;
 		line-height: 2;
 		padding: 0 1.5em 0 .5em;
@@ -42,7 +49,7 @@
 		margin: 0;
 		padding-left: 0;
 		list-style: none;
-		background-color: rgba(#fff, .8);
+		background-color: rgba(#fff, .9);
 		width: 4.4em;
 		max-height: 0;
 		overflow: hidden;
@@ -68,6 +75,11 @@
 	}
 	&__logo-type {
 		fill: #fff;
+		transition: all 250ms ease-in;
+
+		&.type-scroll {
+			fill: $color4;
+		}
 	}
 	&__logo-circle-1 {
 		fill: $color1;
@@ -104,6 +116,10 @@
 		top: -.7em;
 		right: 0;
 		z-index: 550;
+		transition: all 250ms ease-in;
+		&.button-scroll {
+			fill: $color5;
+		}
 	}
 	//Book Now button
 	&__book-btn {

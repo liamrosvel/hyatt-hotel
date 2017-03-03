@@ -2,18 +2,12 @@
 	padding-bottom: 1em;
 
 	&__container {
+		
+	}
+	&__header,
+	&__info-container {
 		width: 90%;
 		margin: 0 auto;
-	}
-	&__img-container {
-		margin: 0;
-		padding: 0;
-	}
-	&__copy-container {
-
-	}
-	&__header {
-
 	}
 	&__header-title {
 		color: $color5;

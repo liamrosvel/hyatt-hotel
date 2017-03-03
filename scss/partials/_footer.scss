@@ -10,6 +10,8 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+
+		margin-bottom: 5em;
 	}
 	&__item {
 		width: 43%;
@@ -27,7 +29,76 @@
 	&__list-link {
 		color: rgba(#fff, .5);
 		text-decoration: none;
-		line-height: 2.5;
-		font-size: 1.2em;
+		line-height: 3;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	//social links
+	&__social {
+
+	}
+	//logo svg styles
+	&__logo-container {
+		text-align: center;
+	}
+	&__logo-hyatt {
+		width: 8em;
+	}
+	&__logo-type {
+		fill: #fff;
+	}
+	&__logo-circle-1 {
+		fill: $color1;
+	}
+	&__logo-circle-2,
+	&__logo-circle-8 {
+		fill: #111;
+	}
+	&__logo-circle-3 {
+		fill: #F18121;
+	}
+	&__logo-circle-4 {
+		fill: #7582C0;
+	}
+	&__logo-circle-5 {
+		fill: #B2AA7E;
+	}
+	&__logo-circle-6 {
+		fill: #D5DF37;
+	}
+	&__logo-circle-7 {
+		fill: #58B1CE;
+	}
+	&__logo-circle-9 {
+		fill: #76C065;
+	}
+	//list icons
+	&__social-list {
+		margin: 3em 0 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+	&__social-list-item {
+		display: inline-block;
+	}
+	&__social-icon {
+		fill: #fff;
+		width: 2.2em;
+		height: 2.2em;
+		cursor: pointer;
+		transition: all 250ms ease-in;
+		&:hover {
+			fill: $color1;
+		}
+	}
+	//copyright
+	&__copyright {
+		text-align: center;
+		color: #fff;
+		margin-top: 2em;
 	}
 }

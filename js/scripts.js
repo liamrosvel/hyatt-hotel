@@ -1,4 +1,4 @@
-//variables and objects
+//OBJECTS AND VARIABLES
 
 var toggle = document.getElementById("toggle-menu");
 var mainMenu = document.getElementById("main-menu");
@@ -16,9 +16,33 @@ var checkout = document.getElementById("check-out");
 var calendar1 = document.getElementById("calendar-one");
 var calendar2 = document.getElementById("calendar-two");
 
-//functions
+//FUNCTIONS
 
-//Events
+function scrollHeader(e)
+{
+	var header = document.getElementById("header");
+	var button = document.querySelector(".js-scrollButton");
+	var type1 = document.querySelector(".js-type-scroll1");
+	var type2 = document.querySelector(".js-type-scroll2");
+	var scrollHeader = document.body.scrollTop;
+
+	if(scrollHeader > 100)
+	{
+		header.classList.add("header-scroll");
+		button.classList.add("button-scroll");
+		type1.classList.add("type-scroll");
+		type2.classList.add("type-scroll");
+	}
+	else
+	{
+		header.classList.remove("header-scroll");
+		button.classList.remove("button-scroll");
+		type1.classList.remove("type-scroll");
+		type2.classList.remove("type-scroll");
+	}
+}
+
+//EVENTS
 
 //function to show the menu off canvas
 toggle.addEventListener('click', function(){
@@ -49,3 +73,5 @@ checkin.addEventListener('click', function(){
 checkout.addEventListener('click', function(){
 	calendar2.classList.toggle('calendar-play');
 });
+
+window.addEventListener('scroll', scrollHeader);

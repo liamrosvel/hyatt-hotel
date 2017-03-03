@@ -11,11 +11,17 @@ img {
   max-width: 100%; }
 
 .header {
-  padding: 1.5em 0;
+  padding: 1em 0;
+  background-color: transparent;
+  height: 5em;
   position: fixed;
   width: 100%;
   top: 0;
-  left: 0; }
+  left: 0;
+  z-index: 600;
+  transition: all 350ms ease-in; }
+  .header.header-scroll {
+    background-color: #fff; }
   .header__container {
     width: 90%;
     margin: 0 auto; }
@@ -28,7 +34,7 @@ img {
   .header__opt-lenguage {
     color: #999999;
     font-size: 1.3em;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     display: inline-block;
     line-height: 2;
     padding: 0 1.5em 0 .5em;
@@ -44,7 +50,7 @@ img {
     margin: 0;
     padding-left: 0;
     list-style: none;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     width: 4.4em;
     max-height: 0;
     overflow: hidden;
@@ -62,7 +68,10 @@ img {
     top: 0;
     left: 25%; }
   .header__logo-type {
-    fill: #fff; }
+    fill: #fff;
+    transition: all 250ms ease-in; }
+    .header__logo-type.type-scroll {
+      fill: #333333; }
   .header__logo-circle-1 {
     fill: #f5a623; }
   .header__logo-circle-2, .header__logo-circle-8 {
@@ -86,7 +95,10 @@ img {
     position: absolute;
     top: -.7em;
     right: 0;
-    z-index: 550; }
+    z-index: 550;
+    transition: all 250ms ease-in; }
+    .header__icon-menu.button-scroll {
+      fill: #999999; }
   .header__book-btn {
     display: inline-block;
     line-height: 2.7;
@@ -547,12 +559,9 @@ img {
 
 .contact {
   padding-bottom: 1em; }
-  .contact__container {
+  .contact__header, .contact__info-container {
     width: 90%;
     margin: 0 auto; }
-  .contact__img-container {
-    margin: 0;
-    padding: 0; }
   .contact__header-title {
     color: #999999;
     font-weight: 700;
@@ -644,7 +653,8 @@ img {
     -ms-flex-pack: justify;
     justify-content: space-between;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    margin-bottom: 5em; }
   .footer__item {
     width: 43%; }
   .footer__item-title {
@@ -658,5 +668,51 @@ img {
   .footer__list-link {
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
-    line-height: 2.5;
-    font-size: 1.2em; }
+    line-height: 3; }
+    .footer__list-link:hover {
+      text-decoration: underline; }
+  .footer__logo-container {
+    text-align: center; }
+  .footer__logo-hyatt {
+    width: 8em; }
+  .footer__logo-type {
+    fill: #fff; }
+  .footer__logo-circle-1 {
+    fill: #f5a623; }
+  .footer__logo-circle-2, .footer__logo-circle-8 {
+    fill: #111; }
+  .footer__logo-circle-3 {
+    fill: #F18121; }
+  .footer__logo-circle-4 {
+    fill: #7582C0; }
+  .footer__logo-circle-5 {
+    fill: #B2AA7E; }
+  .footer__logo-circle-6 {
+    fill: #D5DF37; }
+  .footer__logo-circle-7 {
+    fill: #58B1CE; }
+  .footer__logo-circle-9 {
+    fill: #76C065; }
+  .footer__social-list {
+    margin: 3em 0 0;
+    padding: 0;
+    list-style: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%; }
+  .footer__social-list-item {
+    display: inline-block; }
+  .footer__social-icon {
+    fill: #fff;
+    width: 2.2em;
+    height: 2.2em;
+    cursor: pointer;
+    transition: all 250ms ease-in; }
+    .footer__social-icon:hover {
+      fill: #f5a623; }
+  .footer__copyright {
+    text-align: center;
+    color: #fff;
+    margin-top: 2em; }
