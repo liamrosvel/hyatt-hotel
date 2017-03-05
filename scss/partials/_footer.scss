@@ -5,6 +5,14 @@
 	&__container {
 		width: 90%;
 		margin: 0 auto;
+
+		@media screen and (min-width: 1024px) {
+			width: 85%;
+		}
+
+		@media screen and (min-width: 1200px) {
+            width: 1110px; 
+        }
 	}
 	&__items-container {
 		display: flex;
@@ -12,9 +20,17 @@
 		flex-wrap: wrap;
 
 		margin-bottom: 5em;
+
+		@media screen and (min-width: 1024px) {
+        	margin-bottom: 0;
+        }
 	}
 	&__item {
 		width: 43%;
+
+		@media screen and (min-width: 768px) {
+			width: 25%;
+		}
 	}
 	&__item-title {
 		text-transform: uppercase;
@@ -44,6 +60,10 @@
 	}
 	&__logo-hyatt {
 		width: 8em;
+
+		@media screen and (min-width: 1024px) {
+			width: 5em;
+		}
 	}
 	&__logo-type {
 		fill: #fff;
@@ -81,6 +101,19 @@
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
+
+		@media screen and (min-width: 768px) {
+			width: 60%;
+			margin: 2em auto 0;
+		}
+
+		@media screen and (min-width: 1024px) {
+			width: 50%;
+		}
+
+		@media screen and (min-width: 1200px) {
+			width: 35%;
+		}
 	}
 	&__social-list-item {
 		display: inline-block;
@@ -94,11 +127,25 @@
 		&:hover {
 			fill: $color1;
 		}
+
+		@media screen and (min-width: 768px) {
+			width: 1.7em;
+			height: 1.7em;
+		}
+
+		@media screen and (min-width: 1024px) {
+			width: 1.4em;
+			height: 1.4em;
+		}
 	}
 	//copyright
 	&__copyright {
 		text-align: center;
 		color: #fff;
 		margin-top: 2em;
+
+		@media screen and (min-width: 1024px) {
+			font-size: .9em;
+		}
 	}
 }
